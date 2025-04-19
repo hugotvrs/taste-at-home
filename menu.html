@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu - Taste at Home</title>
+  <link rel="stylesheet" href="css/external.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="img/logo.png" alt="Taste at Home Logo" class="logo">
+    </a>
+    <h1 class="site-title">Taste at Home</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="game.html">Mini Game</a>
+  </nav>
+
+  <main>
+    <h2>Our Dishes</h2>
+    <div class="gallery">
+      <div class="dish">
+        <img src="img/dishes/beans-rice.webp" alt="Rice & Beans" 
+             onmouseover="showHint(this)" 
+             onclick="redirectToOrder('rice_beans')">
+        <strong>Rice & Beans</strong>
+      </div>
+      <div class="dish">
+        <img src="img/dishes/grilled-chicken.jpg" alt="Grilled Chicken" 
+             onmouseover="showHint(this)" 
+             onclick="redirectToOrder('grilled_chicken')">
+        <strong>Grilled Chicken</strong>
+      </div>
+      <div class="dish">
+        <img src="img/dishes/pasta.jpg" alt="Pasta" 
+             onmouseover="showHint(this)" 
+             onclick="redirectToOrder('pasta')">
+        <strong>Pasta</strong>
+      </div>
+      <div class="dish">
+        <img src="img/dishes/salad.jpg" alt="Salad" 
+             onmouseover="showHint(this)" 
+             onclick="redirectToOrder('salad')">
+        <strong>Salad</strong>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Taste at Home. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showHint(element) {
+      element.title = "Click to add to cart";
+    }
+
+    function redirectToOrder(dish) {
+      window.location.href = "order.html?dish=" + dish;
+    }
+  </script>
+
+</body>
+</html>
